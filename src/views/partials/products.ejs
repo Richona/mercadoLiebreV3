@@ -1,0 +1,24 @@
+<% array.forEach(({id, name, price, discount, image})=> { %>
+    <div class="col-12 col-sm-6 col-lg-3">
+        <section class="product-box">
+            <a href="/products/detail/<%= id %>">
+                <figure class="product-box_image">
+                    <img src="/images/products/<%= image %>" alt="imagen de producto">
+                </figure>
+                <article class="product-box_data">
+                    <h2>$<%= toThousand((price - (price * discount / 100)).toFixed(0)) %> <!-- toFixed quita los decimales -->
+                    </h2>
+                    <% if (discount> 0) { %>
+                        <span>
+                            <%= discount %>% OFF
+                        </span>
+                        <% } %>
+                            <p>
+                                <%= name %>
+                            </p>
+                            <i class="fas fa-truck"></i>
+                </article>
+            </a>
+        </section>
+    </div>
+    <% }) %>

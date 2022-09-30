@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('../partials/head', {title: "register"}) %>
+<body>
+	<!-- Header -->
+	<%- include('../partials/headerNavbar') %>
+	<!-- /Header -->
+
+<body>
+    <main class="register">
+        <form action="" method="post" class="register_section" enctype="multipart/form-data">
+            <!-- NOM Y APE -->
+            <div class="form_box">
+                <input type="text" name="nombreApellido" class="form_box_cajas <%= locals.errors && errors.nombreApellido ? "form_box_cajas-inValid" : null %>" value="<%= locals.oldData ? oldData.nombreApellido : null %>" placeholder="Nombre y apellido">
+                    <small class="form_box_mensaje-error"><%= locals.errors && errors.nombreApellido && errors.nombreApellido.msg %></small><!-- si vino locals, y tengo un error en el name, entra -->
+            </div>
+            <!-- USUARIO -->
+            <div class="form_box">
+                <input type="text" name="nameUsuario" class="form_box_cajas <%= locals.errors && errors.nameUsuario ? "form_box_cajas-inValid" : null %>" value="<%= locals.oldData ? oldData.nameUsuario : null %>" placeholder="Nombre de usuario">
+                    <small class="form_box_mensaje-error"><%= locals.errors && errors.nameUsuario && errors.nameUsuario.msg %></small>
+            </div>
+            <!-- EMAIL -->
+            <div class="form_box">
+                <input type="email" name="email" class="form_box_cajas <%= locals.errors && errors.email ? "form_box_cajas-inValid" : null %>" value="<%= locals.oldData ? oldData.email : null %>" placeholder="E-mail">
+                    <small class="form_box_mensaje-error"><%= locals.errors && errors.email && errors.email.msg %></small>
+            </div>
+            <!-- FECHA -->
+            <div class="form_box">
+                <label for="fecha" class="form_box_titulo">Fecha de nacimiento</label>
+                <input type="date" name="fecha" class="form_box_cajas" id="fecha"  value="<%= locals.oldData ? oldData.fecha : null %>">
+            </div>
+            <!-- DOM -->
+            <div class="form_box">
+                <input type="text" name="domicilio" class="form_box_cajas" placeholder="Domicilio" value="<%= locals.oldData ? oldData.domicilio : null %>">
+            </div>
+            <!-- PERFIL -->
+            <div class="form_box">
+                <label class="form_box_titulo">Perfil del usuario</label>
+                <article class="form_box_radios">
+                        <input type="radio" id="compra" name="uno" value="compra" <%= locals.oldData && oldData.uno && oldData.uno === "compra" ? "checked" : null %> >
+                        <label for="compra">Comprador</label>
+                        <input type="radio" id="vende" name="uno" value="vende" <%= locals.oldData && oldData.uno && oldData.uno === "vende" ? "checked" : null %> >
+                        <label for="vende">Vendedor</label>  
+                </article>
+            </div>
+            <!-- INTERESES -->
+            <div class="form_box">
+                <label class="form_box_titulo">Intereses</label>
+                <article class="form_box_selectores">
+                    <input type="checkbox" id="electro" name="electro" <%= locals.oldData && oldData.electro ? "checked" : null %>>
+                    <label for="electro">Electro</label>
+                </article>
+                <article class="form_box_selectores">
+                    <input type="checkbox" id="moda" name="moda" <%= locals.oldData && oldData.moda ? "checked" : null %>>
+                    <label for="moda">Moda</label>
+                </article>
+                <article class="form_box_selectores">
+                    <input type="checkbox" id="hogar" name="hogar" <%= locals.oldData && oldData.hogar ? "checked" : null %>>
+                    <label for="hogar">Hogar</label>
+                </article>
+                <article class="form_box_selectores">
+                    <input type="checkbox" id="jugueteria" name="jugueteria" <%= locals.oldData && oldData.jugueteria ? "checked" : null %>>
+                    <label for="jugueteria">Jugueteria</label>
+                </article>
+                <article class="form_box_selectores">
+                    <input type="checkbox" id="vida" name="vida" <%= locals.oldData && oldData.vida ? "checked" : null %>>
+                    <label for="vida">Vida sana</label>          
+                </article>
+            </div>
+            <!-- FOTO -->
+            <div class="form_box">
+                <label for="foto" class="form_box_titulo">Foto tuya</label>
+                <input type="file" name="file" class="form_box_cajas" accept="image/*">
+                    <small class="form_box_mensaje-error"><%= locals.errors && errors.file && errors.file.msg %></small>
+            </div>
+            <!-- CLAVES -->
+            <div class="form_box">
+                <label for="contra" class="form_box_titulo">Contraseña</label>
+                <input type="password" name="clave" class="form_box_cajas <%= locals.errors && errors.clave ? "form_box_cajas-inValid" : null %>" id="contra" >
+                    <small class="form_box_mensaje-error"><%= locals.errors && errors.clave && errors.clave.msg %></small>
+            </div>
+            <div class="form_box">
+                <label for="contra2" class="form_box_titulo">Confirmar contraseña</label>
+                <input type="password" name="confiClave" class="form_box_cajas <%= locals.errors && errors.confiClave ? "form_box_cajas-inValid" : null %>"  id="contra2" >
+                    <small class="form_box_mensaje-error"><%= locals.errors && errors.confiClave && errors.confiClave.msg %></small>
+            </div>
+            <!-- BOTONES -->
+            <div class="form_buttons form_buttons_login">
+                <a href="/"><button type="submit" class="form_buttons_login">Enviar</button></a>
+                <button type="reset" class="form_buttons_login">Cancelar</button>
+            </div>
+        </form>
+    </main>
+    <!-- footer -->
+	<%- include('../partials/footer') %>
+	<!-- /footer -->
+</body>
+
+</html>

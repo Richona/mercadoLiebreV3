@@ -1,0 +1,22 @@
+.login_section{
+    align-items: center;
+    max-width: 700px;
+}
+.login_section div{
+    width: 100%;
+}
+.form_buttons_login button{
+    height: 30px;
+
+    background-color: var(--Celeste);
+    color: #0022AA;
+
+    border: 1px solid #0022AA;
+    border-radius: 7px;
+
+    transition: all 450ms;
+}
+.form_buttons_login button:hover{
+    background-color: #0022AA;
+    color: wheat;
+}

@@ -1,0 +1,61 @@
+/* CABECERA */
+.register{
+    background-color: var(--GrisClaro);
+    font-size: 16px;
+}
+.register_section{
+    display: flex;
+    flex-flow: wrap column;
+    gap: 20px;
+
+    padding: 20px 0;
+
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* FORMS */
+.form_box_titulo{
+    display: inline-block;
+    padding-bottom: 10px;
+
+    font-weight: 700;
+}
+.form_box_cajas{
+    padding-left: 5px;
+    
+    height: 30px;
+    width: 100%;
+
+    border: none;
+    border-radius: 5px;
+}
+.form_box_radios{
+    display: flex;
+    flex-flow: row;
+    gap: 20px;
+
+    width: 90%;
+}
+.form_box_selectores{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: 20px;
+
+    padding: 0 0 20px 10px ;
+}
+.form_box_mensaje-error{
+    color: red;
+}
+.form_box_cajas-inValid{
+    border: 1px solid red;
+}
+
+/* BOTONES */
+.form_buttons{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 40px;
+}

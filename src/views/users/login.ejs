@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('../partials/head', {title: "login"}) %>
+<body>
+	<!-- Header -->
+	<%- include('../partials/headerNavbar') %>
+	<!-- /Header -->
+
+<body>
+    <main class="register">
+        <form action="" method="post" class="register_section login_section">
+            <!-- NOM -->
+            <div >
+                <input type="email" class="form_box_cajas <%= locals.errors && errors.email ? "form_box_cajas-inValid" : null %>" placeholder="Email" name="email" value="<%= locals.old && old.email %> " >
+                    <small class="form_box_mensaje-error"><%= locals.errors && errors.email && errors.email.msg %></small>
+            </div>
+            <!-- CLAVE -->
+            <div>
+                <input type="password" class="form_box_cajas <%= locals.errors && errors.clave ? "form_box_cajas-inValid" : null %>" placeholder="Contraseña" name="clave">
+                    <small class="form_box_mensaje-error"><%= locals.errors && errors.clave && errors.clave.msg %></small>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" name="remember_user">Recordar mi usuario
+                </label>
+            </div>
+            <!-- BOTON -->
+            <div class="form_buttons_login">
+                <a href="/"><button type="submit">Enviar</button></a>
+            </div>
+        </form>
+    </main>
+    <!-- footer -->
+	<%- include('../partials/footer') %>
+	<!-- /footer -->
+</body>
+
+</html>

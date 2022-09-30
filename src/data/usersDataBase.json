@@ -1,0 +1,50 @@
+[
+   {
+      "id": 1,
+      "nombreApellido": "dsfadfs",
+      "nameUsuario": "dfsdsfa",
+      "email": "afsddsafsda@asdsda.com",
+      "fecha": "",
+      "domicilio": "",
+      "perfil": null,
+      "intereses": {},
+      "clave": "$2a$10$oXIl8qryVZ7Q2eEraVE8kOqSCcCNcjpzZVX7tSYspMjRRU3sQtJ6e",
+      "avatar": "user-1661974185119.jpg"
+   },
+   {
+      "id": 2,
+      "nombreApellido": "Richard Cuevas",
+      "nameUsuario": "Richona",
+      "email": "richard@gmail.com",
+      "fecha": "",
+      "domicilio": "",
+      "perfil": null,
+      "intereses": {},
+      "clave": "$2a$10$I/SC260uZ9VO7IcEAu5z9.J4EJ7.4KqeIWxtXGje0FdwWGzWq6Q/q",
+      "avatar": "user-1661975799070.jpg"
+   },
+   {
+      "id": 3,
+      "nombreApellido": "nadia cuevas",
+      "nameUsuario": "Nitita",
+      "email": "nadia@gmail.com",
+      "fecha": "",
+      "domicilio": "",
+      "perfil": null,
+      "intereses": {},
+      "clave": "$2a$10$MLQfqNyZPaGiFnyB6sFDX.dwW2scjga8v5lFaCfs6NDTG3XrDAdO6",
+      "avatar": "user-1662054154345.png"
+   },
+   {
+      "id": 4,
+      "nombreApellido": "richard",
+      "nameUsuario": "asdda",
+      "email": "richard1@gmail.com",
+      "fecha": "",
+      "domicilio": "",
+      "perfil": null,
+      "intereses": {},
+      "clave": "$2a$10$R3haoDaujLvtjLNegNAfQuFcfmu.BYAfjrUQ7F0czdBMwJgMTHnmK",
+      "avatar": "user-1662510531342.jpg"
+   }
+]
